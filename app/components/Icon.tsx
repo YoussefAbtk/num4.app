@@ -10,6 +10,9 @@ import {
   ViewProps,
   ViewStyle,
 } from "react-native"
+// import { SvgXml } from "react-native-svg"
+
+import { svgs } from "../../assets/icons/svg/index";
 
 export type IconTypes = keyof typeof iconRegistry
 
@@ -38,6 +41,8 @@ interface IconProps extends TouchableOpacityProps {
    * Style overrides for the icon container
    */
   containerStyle?: StyleProp<ViewStyle>
+
+  svg?: boolean
 
   /**
    * An optional function to be called when the icon is pressed
@@ -80,7 +85,16 @@ export function Icon(props: IconProps) {
       {...WrapperProps}
       style={$containerStyleOverride}
     >
-      <Image style={$imageStyle} source={iconRegistry[icon]} />
+      {props.svg ? (
+        iconRegistry[icon]({
+          width: size,
+          height: size,
+          stroke: color || "#CCC",
+          fill: color || "#FFF",
+        })
+      ) : (
+        <Image style={$imageStyle} source={iconRegistry[icon]} />
+      )}
     </Wrapper>
   )
 }
@@ -99,6 +113,7 @@ export const iconRegistry = {
   settings: require("../../assets/icons/settings.png"),
   view: require("../../assets/icons/view.png"),
   x: require("../../assets/icons/x.png"),
+  ...svgs,
 }
 
 const $imageStyleBase: ImageStyle = {
