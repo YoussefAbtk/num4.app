@@ -18,7 +18,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
 
   return (
     <SafeAreaView style={$container}>
-      <WebView source={{ uri: "https://int.app.num4.art" }} />
+      <WebView source={{ uri: "https://int.app.num4.art/fr/lecteur-musique" }} />
     </SafeAreaView>
   )
   // return (
