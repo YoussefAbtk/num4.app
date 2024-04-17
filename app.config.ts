@@ -22,5 +22,12 @@ module.exports = ({ config }: ConfigContext): Partial<ExpoConfig> => {
       require("./plugins/withSplashScreen").withSplashScreen,
       require("./plugins/withFlipperDisabled").withFlipperDisabled,
     ],
+  
+   "updates": {
+    "url": "https://u.expo.dev/b9d31edb-9095-42f8-a57d-632612ced6fc"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
   }
 }

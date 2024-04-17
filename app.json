@@ -1,7 +1,15 @@
 {
   "name": "numero4",
   "displayName": "numero4",
+  "owner": "piveteauit",
   "expo": {
+  "owner": "piveteauit",
+
+    "extra": {
+      "eas": {
+        "projectId": "b9d31edb-9095-42f8-a57d-632612ced6fc"
+      }
+    },
     "name": "numero4",
     "slug": "numero4",
     "scheme": "numero4",
