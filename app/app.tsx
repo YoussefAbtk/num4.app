@@ -89,7 +89,9 @@ function App(props: AppProps) {
   // In iOS: application:didFinishLaunchingWithOptions:
   // In Android: https://stackoverflow.com/a/45838109/204044
   // You can replace with your own loading component if you wish.
-  if (!rehydrated || !isNavigationStateRestored || !areFontsLoaded) return null
+  console.log("initialNavigationState2", rehydrated || isNavigationStateRestored || areFontsLoaded)
+
+  // if (!rehydrated || !isNavigationStateRestored || !areFontsLoaded) return null
 
   const linking = {
     prefixes: [prefix],
